@@ -10,33 +10,65 @@ namespace CP220_LINK
     {
         static void Main(string[] args)
         {
-            //Link<int> myLink = new Link<int>(16);
-            //Debug.WriteLine(myLink.Data);
+            // Create Link Objects
+            Link<int> L1 = new Link<int>(1);
+            Link<int> L2 = new Link<int>(2);
+            Link<int> L3 = new Link<int>(3);
+            Link<int> L4 = new Link<int>(4);
+            Link<int> L5 = new Link<int>(5);
 
-            //myLink.insertAfter(new Link<int>(21));
+            // Create Link Chain
+            L1.insertAfter(L2);
+            L2.insertAfter(L3);
+            L3.insertAfter(L4);
+            L4.insertAfter(L5);
 
-            //Debug.WriteLine(myLink.nextValue.Data);
+            // Creating Chain Data Output (Shows Chain Length)
+            Console.WriteLine("== LINK CHAIN ==");
+            L1.print(L1);
+            L2.print(L2);
+            L3.print(L3);
+            L4.print(L4);
+            L5.print(L5);
+
+            Console.WriteLine("==================");
+
+            Console.WriteLine("L2's nextLink: " + L2.nextLink.data);
+            L2.nextLink.remove();
+            Console.WriteLine("L2's nextLink after remove method: " + L2.nextLink.data);
+
+            Console.ReadKey();
 
         }
 
         public class Link<T>
         {
+            
+            //Fields
             private Link<T> _nextLink;
             private Link<T> _previousLink;
-            private T value;
+            private T _value;
 
+            //Constructor
             public Link(T parm)
             {
-                value = parm;
+                _value = parm;
             }
 
+            //Properties
             public Link<T> nextLink
             {
                 get
                 {
-                    return _nextLink;
+                    if (_nextLink == null)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        return _nextLink;
+                    }
                 }
-
                 set
                 {
                     _nextLink = value;
@@ -46,9 +78,15 @@ namespace CP220_LINK
             {
                 get
                 {
-                    return _previousLink;
+                    if (_previousLink == null)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        return _previousLink;
+                    }
                 }
-
                 set
                 {
                     _previousLink = value;
@@ -58,19 +96,40 @@ namespace CP220_LINK
             {
                 get
                 {
-                    return value;
+                    return _value;
                 }
             }
 
+            //Methods
             public void remove()
             {
-                nextLink.previousLink = previousLink;
-                previousLink.nextLink = nextLink;
+                if (_nextLink == null)
+                {
+                    _previousLink._nextLink = null;
+                }
+                else if (_previousLink == null)
+                {
+                    _nextLink._previousLink = null;
+                }
+                else
+                {
+                    _nextLink._previousLink = _previousLink;
+                    _previousLink._nextLink = _nextLink;
+                }
             }
-
-            public void insertAfter(Link<T> newObj)
+            public void insertAfter(Link<T> newObject)
             {
-
+                _nextLink = newObject;
+                newObject._previousLink = this;
+            }
+            public void print(Link<T> LinkObj)
+            {
+                Link<T> tmp = LinkObj;
+                if(tmp != null)
+                {
+                    Console.WriteLine(tmp.data);
+                    tmp = tmp.nextLink;
+                }
             }
         }
 
