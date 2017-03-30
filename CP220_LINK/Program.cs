@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+    Project: Assignment 2 - Playing With Generics
+    Class: CP220 - OOP II
+    Destription: Generic Link Chain
+    Name: Michael Dorfman
+    Date: 03/30/2017
+*/
+
 namespace CP220_LINK
 {
     class Program
