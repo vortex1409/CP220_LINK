@@ -66,23 +66,23 @@ namespace CP220_LINK
             Console.WriteLine("LINK 0 NEXTLINK: " + chkNull(L0, 1));
             Console.WriteLine();
             Console.WriteLine("LINK 1 PREVIOUS LINK: " + chkNull(L1, 0));
-            Console.WriteLine("LINK 0 DATA: " + L1.data);
+            Console.WriteLine("LINK 1 DATA: " + L1.data);
             Console.WriteLine("LINK 1 NEXTLINK: " + chkNull(L1, 1));
             Console.WriteLine();
             Console.WriteLine("LINK 2 PREVIOUS LINK: " + chkNull(L2, 0));
-            Console.WriteLine("LINK 0 DATA: " + L2.data);
+            Console.WriteLine("LINK 2 DATA: " + L2.data);
             Console.WriteLine("LINK 2 NEXTLINK: " + chkNull(L2, 1));
             Console.WriteLine();
             Console.WriteLine("LINK 3 PREVIOUS LINK: " + chkNull(L3, 0));
-            Console.WriteLine("LINK 0 DATA: " + L3.data);
+            Console.WriteLine("LINK 3 DATA: " + L3.data);
             Console.WriteLine("LINK 3 NEXTLINK: " + chkNull(L3, 1));
             Console.WriteLine();
             Console.WriteLine("LINK 4 PREVIOUS LINK: " + chkNull(L4, 0));
-            Console.WriteLine("LINK 0 DATA: " + L4.data);
+            Console.WriteLine("LINK 4 DATA: " + L4.data);
             Console.WriteLine("LINK 4 NEXTLINK: " + chkNull(L4, 1));
             Console.WriteLine();
             Console.WriteLine("LINK 5 PREVIOUS LINK: " + chkNull(L5, 0));
-            Console.WriteLine("LINK 0 DATA: " + L5.data);
+            Console.WriteLine("LINK 5 DATA: " + L5.data);
             Console.WriteLine("LINK 5 NEXTLINK: " + chkNull(L5, 1));
 
 
