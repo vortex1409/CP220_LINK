@@ -83,11 +83,8 @@ namespace CP220_LINK
             Console.WriteLine("LINK 5 DATA: " + L5.data);
             Console.WriteLine("LINK 5 NEXTLINK: " + chkNull(L5, 1));
 
-
             Console.ReadKey();
-
         }
-
 
        public static string chkNull(Link<int> input, int NP)
         {
@@ -115,7 +112,6 @@ namespace CP220_LINK
 
         public class Link<T>
         {
-            
             //Fields
             private Link<T> _nextLink;
             private Link<T> _previousLink;
@@ -187,6 +183,8 @@ namespace CP220_LINK
                 {
                     _nextLink._previousLink = _previousLink;
                     _previousLink._nextLink = _nextLink;
+                    this._nextLink = null;
+                    this.previousLink = null;
                 }
             }
             public void insertAfter(Link<T> newObject)
