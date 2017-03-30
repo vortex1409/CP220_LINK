@@ -54,14 +54,10 @@ namespace CP220_LINK
             Console.WriteLine("LINK 5 NEXTLINK: " + chkNull(L5, 1));
 
             Console.WriteLine();
-            Console.WriteLine("===============================================");
-            Console.WriteLine("L1's nextLink: " + L1.nextLink.data);
-            L2.remove();
-            Console.WriteLine("L1's nextLink after remove method: " + L1.nextLink.data);
-            Console.WriteLine("===============================================");
-            Console.WriteLine();
 
-            Console.WriteLine("======= LINK CHAIN =======");
+            L2.remove();
+
+            Console.WriteLine("======= LINK CHAIN AFTER L2's Removal =======");
             Console.WriteLine();
             Console.WriteLine("LINK 0 PREVIOUS LINK: " + chkNull(L0, 0));
             Console.WriteLine("LINK 0 DATA: " + L0.data);
@@ -197,18 +193,6 @@ namespace CP220_LINK
             {
                 _nextLink = newObject;
                 newObject._previousLink = this;
-            }
-            public T print(Link<T> LinkObj)
-            {
-                Link<T> tmp = LinkObj;
-                if(tmp != null)
-                {
-                    return tmp.data;
-                }
-                else
-                {
-                    return default(T);
-                }
             }
         }
 
