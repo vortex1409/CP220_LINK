@@ -52,12 +52,14 @@ namespace CP220_LINK
             Console.WriteLine("LINK 5 PREVIOUS LINK: " + chkNull(L5, 0));
             Console.WriteLine("LINK 5 DATA: " + L5.data);
             Console.WriteLine("LINK 5 NEXTLINK: " + chkNull(L5, 1));
-            
-            Console.WriteLine("L2's nextLink: " + L2.nextLink.data);
-            L2.nextLink.remove();
-            L2.previousLink.remove();
-            Console.WriteLine("L2's nextLink after remove method: " + L2.nextLink.data);
-            Console.WriteLine("L2's previousLink after remove method: " + L2.previousLink.data);
+
+            Console.WriteLine();
+            Console.WriteLine("===============================================");
+            Console.WriteLine("L1's nextLink: " + L1.nextLink.data);
+            L1.nextLink.remove();
+            Console.WriteLine("L1's nextLink after remove method: " + L1.nextLink.data);
+            Console.WriteLine("===============================================");
+            Console.WriteLine();
 
             Console.WriteLine("======= LINK CHAIN =======");
             Console.WriteLine();
