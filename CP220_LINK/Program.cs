@@ -56,7 +56,7 @@ namespace CP220_LINK
             Console.WriteLine();
             Console.WriteLine("===============================================");
             Console.WriteLine("L1's nextLink: " + L1.nextLink.data);
-            L1.nextLink.remove();
+            L2.remove();
             Console.WriteLine("L1's nextLink after remove method: " + L1.nextLink.data);
             Console.WriteLine("===============================================");
             Console.WriteLine();
