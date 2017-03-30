@@ -205,6 +205,5 @@ namespace CP220_LINK
                 newObject._previousLink = this;
             }
         }
-
     }
 }
