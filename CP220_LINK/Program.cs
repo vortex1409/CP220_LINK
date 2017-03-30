@@ -26,7 +26,6 @@ namespace CP220_LINK
             L4.insertAfter(L5);
 
             //Creating Chain Data Output (Shows Chain Length)
-            
             Console.WriteLine("======= LINK CHAIN =======");
             Console.WriteLine();
             Console.WriteLine("LINK 0 PREVIOUS LINK: " + chkNull(L0, 0));
@@ -52,9 +51,9 @@ namespace CP220_LINK
             Console.WriteLine("LINK 5 PREVIOUS LINK: " + chkNull(L5, 0));
             Console.WriteLine("LINK 5 DATA: " + L5.data);
             Console.WriteLine("LINK 5 NEXTLINK: " + chkNull(L5, 1));
-
             Console.WriteLine();
 
+            //Removes L2 from chain setting it's next and previous links to NULL
             L2.remove();
 
             Console.WriteLine("======= LINK CHAIN AFTER L2's Removal =======");
@@ -86,6 +85,11 @@ namespace CP220_LINK
             Console.ReadKey();
         }
 
+       // Check If Null Functtion (STATIC)
+       // Recieves Link Object and Selector Variable
+       // If object.nextLink is null then return null
+       // You cannot return the object.<previousLink|nextLink>.data if
+       // object.<previouslink|nextLink> is null
        public static string chkNull(Link<int> input, int NP)
         {
             if(input.nextLink == null && NP == 1)
